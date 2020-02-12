@@ -7,7 +7,7 @@
     tools:context=".ui.activities.Form_Activity">
 
     <EditText
-        android:id="@+id/edt_anotation_id"
+        android:id="@+id/edt_annotation_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/annotation"/>

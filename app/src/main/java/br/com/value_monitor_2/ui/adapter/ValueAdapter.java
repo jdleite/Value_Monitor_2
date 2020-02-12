@@ -37,7 +37,7 @@ public class ValueAdapter extends RecyclerView.Adapter<ValueViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ValueViewHolder holder, int position) {
         ValueGroup valueGroup = valueGroupList.get(position);
-        holder.BindData(valueGroup,valueListener);
+        holder.bindData(valueGroup,valueListener);
     }
 
     @Override
