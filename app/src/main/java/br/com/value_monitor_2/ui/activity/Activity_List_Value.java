@@ -1,15 +1,13 @@
-package br.com.value_monitor_2.ui.activities;
+package br.com.value_monitor_2.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Adapter;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.room.RoomDatabase;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -38,20 +36,15 @@ public class Activity_List_Value extends AppCompatActivity {
         setTitle("Valores Lançados");
         setContentView(R.layout.activity_list_value);
 
+        AgendaDatabase agendaDatabase = AgendaDatabase.getInstance(this);
 
+
+        dao = agendaDatabase.getRoomValueGroup();
 
 
         recyclerView = findViewById(R.id.id_recyclerview);
 
-
-
-
         getActionButton();
-
-
-
-
-
     }
 
     @Override
@@ -60,7 +53,7 @@ public class Activity_List_Value extends AppCompatActivity {
         getList();
     }
 
-    public void getActionButton() {
+    private void getActionButton() {
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,12 +63,14 @@ public class Activity_List_Value extends AppCompatActivity {
         });
     }
 
-    public void getList(){
-        valueGroupList.addAll(dao.findAll());
-        adapter = new ValueAdapter(valueGroupList,valueListener);
+    private void getList() {
+        adapter = new ValueAdapter(valueGroupList, valueListener);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        adapter.load(dao.findAll());
 
 
     }
+
+
 }

@@ -44,4 +44,10 @@ public class ValueAdapter extends RecyclerView.Adapter<ValueViewHolder> {
     public int getItemCount() {
         return valueGroupList.size();
     }
+
+    public void load(List<ValueGroup> valueGroups){
+        this.valueGroupList.clear();
+        this.valueGroupList.addAll(valueGroups);
+        notifyDataSetChanged();
+    }
 }

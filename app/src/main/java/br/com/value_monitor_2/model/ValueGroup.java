@@ -54,4 +54,8 @@ public class ValueGroup implements Serializable {
     public void setDate(String date) {
         this.date = date;
     }
+
+    public boolean validId() {
+        return id > 0;
+    }
 }

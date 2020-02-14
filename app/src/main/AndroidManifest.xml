@@ -8,9 +8,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.activities.Form_Activity"></activity>
+        <activity android:name=".ui.activity.Form_Activity"></activity>
         <activity
-            android:name=".ui.activities.Activity_List_Value"
+            android:name=".ui.activity.Activity_List_Value"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
             <intent-filter>

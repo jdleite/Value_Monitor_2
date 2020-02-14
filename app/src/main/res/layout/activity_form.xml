@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    tools:context=".ui.activities.Form_Activity">
+    android:gravity="center"
+    tools:context=".ui.activity.Form_Activity">
 
     <EditText
         android:id="@+id/edt_annotation_id"
