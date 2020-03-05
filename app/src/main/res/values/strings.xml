@@ -3,4 +3,8 @@
     <string name="annotation">Annotation</string>
     <string name="value">Value</string>
     <string name="date">Date</string>
+    <string name="remocao_valor">Remover Valor Lançado ?</string>
+    <string name="deseja_remover">Deseja Remover a Matéria</string>
+    <string name="sim">Sim</string>
+    <string name="nao">Não</string>
 </resources>

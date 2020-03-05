@@ -1,31 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mask="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    android:background="@color/background"
     android:gravity="center"
-    tools:context=".ui.activity.Form_Activity">
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="134dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="-200dp"
+        android:layout_marginBottom="65dp"
+        android:background="@drawable/banner" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-40dp"
+        android:layout_marginBottom="22dp"
+        android:gravity="center"
+        android:text="Cadastro de Valor"
+        android:textColor="@color/edtColor"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
 
     <EditText
         android:id="@+id/edt_annotation_id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/annotation"/>
+        android:layout_width="380dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/backoundannotation"
+        android:inputType="textEmailAddress"
+        android:maxLength="25"
+        android:paddingLeft="80dp"
+        android:textColor="@color/edtColor"
+        android:textStyle="bold" />
+
 
     <EditText
         android:id="@+id/edt_value_id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/value"/>
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/valor"
+        android:digits="0123456789"
+        android:inputType="numberDecimal"
+        android:paddingLeft="80dp"
+        android:textColor="@color/edtColor"
+        android:textStyle="bold" />
+
 
     <EditText
         android:id="@+id/edt_date_id"
+        android:layout_width="380dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/date"
+        android:inputType="number"
+        android:maxLength="10"
+        android:paddingLeft="80dp"
+        android:textColor="@color/edtColor"
+        android:textStyle="bold"
+        mask:allowed_chars="1234567890" />
+
+    <TextView
+        android:id="@+id/txt_value_form"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/date"/>
-
-
+        android:visibility="invisible" />
 
 
 </LinearLayout>

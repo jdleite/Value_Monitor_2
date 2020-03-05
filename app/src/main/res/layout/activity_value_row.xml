@@ -1,34 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_cardview"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:layout_height="125dp"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    app:cardBackgroundColor="@color/backgroundCardView">
 
+    <ImageView
+        android:id="@+id/id_img_close"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:layout_marginLeft="350dp"
+        android:src="@drawable/close" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginBottom="20dp">
+        android:orientation="vertical">
+
 
         <TextView
             android:id="@+id/id_txt_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name" />
+            android:hint="Name"
+            android:textSize="30sp"
+            android:textColor="@color/txtNameColor"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"/>
+
 
         <TextView
             android:id="@+id/id_txt_value"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="R$ 10,00" />
+            android:hint="R$ 10,00"
+            android:textSize="15sp"
+            android:textColor="@color/txtValueDateColor"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"/>
 
         <TextView
             android:id="@+id/id_txt_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="23/08/1986" />
+            android:hint="23/08/1986"
+            android:textSize="15sp"
+            android:textColor="@color/txtValueDateColor"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            />
 
 
     </LinearLayout>

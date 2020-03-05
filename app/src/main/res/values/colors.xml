@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimary">#ECF7FB</color>
+    <color name="colorPrimaryDark">#ECF7FB</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="background">#ECF7FB</color>
+    <color name="backgroundCardView">#E1F1FD</color>
+    <color name="txtNameColor">#DDB285</color>
+    <color name="txtValueDateColor">#6992A1</color>
+    <color name="edtColor">#5E9DC8</color>
+
+
 </resources>

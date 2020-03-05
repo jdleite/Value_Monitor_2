@@ -1,8 +1,10 @@
 package br.com.value_monitor_2.ui.listener;
 
-public interface ValueListener {
-    void onListClick(int id);
+import br.com.value_monitor_2.model.ValueGroup;
 
-    void onDeleteClick(int id);
+public interface ValueListener {
+    void onListClick(ValueGroup valueGroup);
+
+    void onDeleteClick(ValueGroup valueGroup);
 
 }

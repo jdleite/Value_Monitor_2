@@ -11,11 +11,11 @@ public class ValueGroup implements Serializable {
     @PrimaryKey(autoGenerate = true)
     private int id = 0;
     private String annotation;
-    private double value;
+    private String value;
     private String date;
 
     @Ignore
-    public ValueGroup(String annotation, double value, String date) {
+    public ValueGroup(String annotation, String value, String date) {
         this.annotation = annotation;
         this.value = value;
         this.date = date;
@@ -39,11 +39,11 @@ public class ValueGroup implements Serializable {
         this.annotation = annotation;
     }
 
-    public double getValue() {
+    public String getValue() {
         return value;
     }
 
-    public void setValue(double value) {
+    public void setValue(String value) {
         this.value = value;
     }
 

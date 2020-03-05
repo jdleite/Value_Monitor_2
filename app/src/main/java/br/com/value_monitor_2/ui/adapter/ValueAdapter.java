@@ -31,13 +31,13 @@ public class ValueAdapter extends RecyclerView.Adapter<ValueViewHolder> {
         Context context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
         View valueView = inflater.inflate(R.layout.activity_value_row, parent, false);
-        return new ValueViewHolder(valueView,context);
+        return new ValueViewHolder(valueView, context);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ValueViewHolder holder, int position) {
         ValueGroup valueGroup = valueGroupList.get(position);
-        holder.bindData(valueGroup,valueListener);
+        holder.bindData(valueGroup, valueListener);
     }
 
     @Override
@@ -45,9 +45,16 @@ public class ValueAdapter extends RecyclerView.Adapter<ValueViewHolder> {
         return valueGroupList.size();
     }
 
-    public void load(List<ValueGroup> valueGroups){
+    public void load(List<ValueGroup> valueGroups) {
         this.valueGroupList.clear();
         this.valueGroupList.addAll(valueGroups);
         notifyDataSetChanged();
+    }
+
+
+    public void removeListValue(ValueGroup valueGroup) {
+        valueGroupList.remove(valueGroup);
+        notifyDataSetChanged();
+
     }
 }

@@ -14,7 +14,7 @@ public abstract class AgendaDatabase extends RoomDatabase {
 
     public abstract RoomValueGroup getRoomValueGroup();
 
-    private static final String NOME_BANCO_DE_DADOS = "value.db";
+    private static final String NOME_BANCO_DE_DADOS = "testee.db";
 
     public static AgendaDatabase getInstance(Context context){
         return Room.databaseBuilder(context,AgendaDatabase.class,NOME_BANCO_DE_DADOS)
