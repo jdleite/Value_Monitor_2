@@ -13,12 +13,22 @@ public class ValueGroup implements Serializable {
     private String annotation;
     private String value;
     private String date;
+    private String month_name;
 
     @Ignore
-    public ValueGroup(String annotation, String value, String date) {
+    public ValueGroup(String annotation, String value, String date,String month_name) {
         this.annotation = annotation;
         this.value = value;
         this.date = date;
+        this.month_name = month_name;
+    }
+
+    public String getMonth_name() {
+        return month_name;
+    }
+
+    public void setMonth_name(String month_name) {
+        this.month_name = month_name;
     }
 
     public ValueGroup(){}

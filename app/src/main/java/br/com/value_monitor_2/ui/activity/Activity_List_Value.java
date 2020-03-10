@@ -48,7 +48,6 @@ public class Activity_List_Value extends AppCompatActivity {
         getActionButton();
 
 
-
         valueListener = new ValueListener() {
             @Override
             public void onListClick(ValueGroup valueGroup) {

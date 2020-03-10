@@ -23,7 +23,7 @@ import br.com.value_monitor_2.ui.listener.ValueListener;
 
 public class ValueViewHolder extends RecyclerView.ViewHolder {
     SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-    private TextView txtAnnotation, txtValue, txtDate;
+    private TextView txtAnnotation, txtValue, txtDate,txtMonthName;
     CardView cardView;
     private ImageView imgClose;
     private Context context;
@@ -34,6 +34,7 @@ public class ValueViewHolder extends RecyclerView.ViewHolder {
         txtAnnotation = itemView.findViewById(R.id.id_txt_name);
         txtValue = itemView.findViewById(R.id.id_txt_value);
         txtDate = itemView.findViewById(R.id.id_txt_date);
+        txtMonthName = itemView.findViewById(R.id.id_txt_month_name);
         imgClose = itemView.findViewById(R.id.id_img_close);
         cardView = itemView.findViewById(R.id.id_cardview);
         this.context = context;
@@ -44,6 +45,7 @@ public class ValueViewHolder extends RecyclerView.ViewHolder {
         txtAnnotation.setText(valueGroup.getAnnotation());
         txtValue.setText(valueGroup.getValue());
         txtDate.setText(valueGroup.getDate());
+        txtMonthName.setText(valueGroup.getMonth_name());
 
 
         cardView.setOnClickListener(new View.OnClickListener() {

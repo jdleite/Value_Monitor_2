@@ -25,6 +25,7 @@ import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
@@ -42,6 +43,7 @@ public class Form_Activity extends AppCompatActivity {
     private GetField getField = new GetField();
     private ValueGroup valueGroup;
     private RoomValueGroup dao;
+    private String txtMonthName;
     private SimpleDateFormat dt = new SimpleDateFormat("dd/MM/yyyy");
     String todayDate = dt.format(new Date());
 
@@ -54,6 +56,8 @@ public class Form_Activity extends AppCompatActivity {
         dao = agendaDatabase.getRoomValueGroup();
         startFields();
         loadValueGroup();
+
+        txtMonthName = getMonthName();
 
         getField.edtValue.setRawInputType(Configuration.KEYBOARD_12KEY);
         getField.edtValue.addTextChangedListener(new CurrencyTextWatcher(getField.edtValue));
@@ -130,6 +134,7 @@ public class Form_Activity extends AppCompatActivity {
         valueGroup.setAnnotation(getField.edtAnnotation.getText().toString());
         valueGroup.setValue(getField.txtValue.getText().toString());
         valueGroup.setDate(todayDate);
+        valueGroup.setMonth_name(txtMonthName);
     }
 
     private void dateMask() {
@@ -210,5 +215,36 @@ public class Form_Activity extends AppCompatActivity {
             }
         }
 
+    }
+
+    public String getMonthName(){
+        Calendar calendar = Calendar.getInstance();
+        String mes = calendar.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.ENGLISH);
+
+        if (mes.equalsIgnoreCase("january")) {
+            return "Janeiro";
+        } else if (mes.equalsIgnoreCase("february")) {
+            return "Fevereiro";
+        } else if (mes.equalsIgnoreCase("march")) {
+            return "Março";
+        } else if (mes.equalsIgnoreCase("april")) {
+            return "Abril";
+        } else if (mes.equalsIgnoreCase("may")) {
+            return "Maio";
+        } else if (mes.equalsIgnoreCase("june")) {
+            return "Junho";
+        } else if (mes.equalsIgnoreCase("july")) {
+            return "Julho";
+        } else if (mes.equalsIgnoreCase("august")) {
+            return "Agosto";
+        } else if (mes.equalsIgnoreCase("september")) {
+            return "Setembro";
+        } else if (mes.equalsIgnoreCase("october")) {
+            return "Outubro";
+        } else if (mes.equalsIgnoreCase("november")) {
+            return "Novembro";
+        }
+
+        return mes;
     }
 }
