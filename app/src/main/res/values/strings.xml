@@ -7,4 +7,5 @@
     <string name="deseja_remover">Deseja Remover a Matéria</string>
     <string name="sim">Sim</string>
     <string name="nao">Não</string>
+    <string name="campo_obrigatorio">Campo Obrigatório</string>
 </resources>

@@ -121,13 +121,18 @@ public class Form_Activity extends AppCompatActivity {
     }
 
     private void saveValue() {
-        setValueGroup();
-        if (valueGroup.validId()) {
-            dao.update(valueGroup);
+
+        if (!validation()) {
+            return;
         } else {
-            dao.save(valueGroup);
+            setValueGroup();
+            if (valueGroup.validId()) {
+                dao.update(valueGroup);
+            } else {
+                dao.save(valueGroup);
+            }
+            finish();
         }
-        finish();
     }
 
     private void setValueGroup() {
@@ -217,7 +222,7 @@ public class Form_Activity extends AppCompatActivity {
 
     }
 
-    public String getMonthName(){
+    private String getMonthName() {
         Calendar calendar = Calendar.getInstance();
         String mes = calendar.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.ENGLISH);
 
@@ -246,5 +251,20 @@ public class Form_Activity extends AppCompatActivity {
         }
 
         return mes;
+    }
+
+    private boolean validation() {
+        if (getField.edtAnnotation.getText().toString().trim().isEmpty()) {
+            getField.edtAnnotation.setError(getString(R.string.campo_obrigatorio));
+            return false;
+        } else if (getField.edtValue.getText().toString().trim().isEmpty()) {
+            getField.edtValue.setError(getString(R.string.campo_obrigatorio));
+            return false;
+        } else if (getField.edtDate.getText().toString().trim().isEmpty()) {
+            getField.edtDate.setError(getString(R.string.campo_obrigatorio));
+            return false;
+        }
+        return true;
+
     }
 }

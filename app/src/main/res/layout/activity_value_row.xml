@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/id_cardview"
     android:layout_width="match_parent"
-    android:layout_height="125dp"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:layout_margin="10dp"
     app:cardBackgroundColor="@color/backgroundCardView">
@@ -30,21 +30,7 @@
             android:textSize="30sp"
             android:textColor="@color/txtNameColor"
             android:textStyle="bold"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="5dp"/>
-
-        <TextView
-            android:id="@+id/id_txt_month_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Agosto"
-            android:textSize="12sp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="-15dp"
-            android:textStyle="bold"
-            android:layout_marginTop="-5dp"
-            android:textColor="@color/txtNameColor"/>
-
+            android:layout_marginLeft="10dp"/>
 
         <TextView
             android:id="@+id/id_txt_value"
@@ -55,8 +41,19 @@
             android:textColor="@color/txtValueDateColor"
             android:textStyle="bold"
             android:layout_marginLeft="10dp"
-            android:layout_marginBottom="-20dp"
-            android:layout_marginTop="30dp"/>
+            android:layout_marginTop="10dp"/>
+
+
+        <TextView
+            android:id="@+id/id_txt_month_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agosto"
+            android:textSize="12sp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/txtNameColor"
+            android:layout_marginTop="5dp"/>
 
         <TextView
             android:id="@+id/id_txt_date"
@@ -66,9 +63,7 @@
             android:textSize="15sp"
             android:textColor="@color/txtValueDateColor"
             android:textStyle="bold"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="30dp"
-            />
+            android:layout_marginLeft="10dp"/>
 
 
     </LinearLayout>

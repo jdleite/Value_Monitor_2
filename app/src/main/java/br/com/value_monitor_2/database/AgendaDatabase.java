@@ -23,7 +23,7 @@ public abstract class AgendaDatabase extends RoomDatabase {
         return Room.databaseBuilder(context, AgendaDatabase.class, NOME_BANCO_DE_DADOS)
                 .allowMainThreadQueries()
                 /*Destroi o esquema do banco de dados sem precisas utilizar migrations*/
-                .fallbackToDestructiveMigration()
+                //.fallbackToDestructiveMigration()
                 .addMigrations(new Migration(1, 2) {
                     @Override
                     public void migrate(@NonNull SupportSQLiteDatabase database) {
