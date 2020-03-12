@@ -2,27 +2,18 @@ package br.com.value_monitor_2.ui.activity;
 
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
-import android.text.InputFilter;
-import android.text.InputType;
 import android.text.TextWatcher;
-import android.text.method.DigitsKeyListener;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.lang.ref.WeakReference;
-import java.math.BigDecimal;
-import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -35,8 +26,6 @@ import br.com.value_monitor_2.database.dao.RoomValueGroup;
 import br.com.value_monitor_2.model.ValueGroup;
 
 import static br.com.value_monitor_2.ui.activity.ConstantsActivity.VALUE_KEY;
-import static java.lang.Integer.min;
-import static java.lang.StrictMath.max;
 
 public class Form_Activity extends AppCompatActivity {
 
@@ -77,7 +66,6 @@ public class Form_Activity extends AppCompatActivity {
         int id = item.getItemId();
         if (id == R.id.id_menu_save) {
             dateMask();
-            //Toast.makeText(this, "" + todayDate, Toast.LENGTH_SHORT).show();
             saveValue();
         }
         return super.onOptionsItemSelected(item);
@@ -207,9 +195,6 @@ public class Form_Activity extends AppCompatActivity {
                     }
                     // include here anything you may want to do after the formatting is completed.
                     currency.addTextChangedListener(this);
-
-
-                    Toast.makeText(Form_Activity.this, "" + v_text, Toast.LENGTH_SHORT).show();
                     getField.txtValue.setText(v_formattedValue);
 
 

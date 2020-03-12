@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Value_Monitor_2</string>
+    <string name="app_name"></string>
     <string name="annotation">Annotation</string>
     <string name="value">Value</string>
     <string name="date">Date</string>
